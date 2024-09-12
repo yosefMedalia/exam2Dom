@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battalion Force Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="home-section">
+        <h1 class="txt">BATTALION FORCE MANAGEMENT</h1>
+        <div class="kav"></div>
+        <form id="soldierForm">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="text" id="rank" placeholder="Rank" required>
+            <input type="text" id="position" placeholder="Position" required>
+            <input type="text" id="platoon" placeholder="Platoon" required>
+            <select id="status">
+                <option value="Active">Active</option>
+                <option value="Reserve">Reserve</option>
+                <option value="Retired">Retired</option>
+            </select>
+            <input type="number" id="missionTime" placeholder="Mission Time (seconds)" required>
+            <button type="submit">Add Personnel</button>
+            <h2 class="txt">FORCES OVERVIEW</h2>
+            <div class="kav"></div>
+        </form>
+        <button id="sortBtn">Ascend/Descend</button>
+          
+        <table id="soldiersTable">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Rank</th>
+                    <th>Position</th>
+                    <th>Platoon</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- יוצג הרנדור של החיילים -->
+            </tbody>
+        </table>
+        
+    </div>
+ 
+        
+    <!-- הסקשן של העריכה שעכשיו הוא none -->
+    <div id="edit-section">
+        <h1 class="txt">EDIT PERSONNEL</h1>
+        <div class="kav"></div>
+
+        <form id="editForm">
+            <input type="text" id="editFullName" required>
+            <input type="text" id="editRank" required>
+            <input type="text" id="editPosition" required>
+            <input type="text" id="editPlatoon" required>
+            <select id="editStatus">
+                <option value="Active">Active</option>
+                <option value="Reserve">Reserve</option>
+                <option value="Retired">Retired</option>
+            </select>
+            <input type="number" id="editMissionTime" required>
+            <button type="submit">Save Changes</button>
+            <button type="button" id="cancelEdit">Cancel</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
